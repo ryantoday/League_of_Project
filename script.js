@@ -55,7 +55,7 @@ function letsGetMatches(summonerID) {
           	matches = json['matches'][x].matchId;
             champId = json['matches'][x].champion;
             getChampName(champId); 
-            alert(image);
+            alert(image); //this won't stay in the code. It's just helping to debug.
             document.getElementById("matchList").innerHTML = document.getElementById("matchList").innerHTML + matches + "<br />"; 							  document.getElementById("champId").innerHTML = document.getElementById("champId").innerHTML + champId + "<br />";
             document.getElementById("champName").innerHTML = document.getElementById("champName").innerHTML + champName + "<br />";
             document.getElementById("image").innerHTML = document.getElementById("image").innerHTML + image + "<br />";
