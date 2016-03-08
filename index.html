@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<br />Summoner Name
+<br />
+<input id="summonerName" />
+<input type="submit" onclick="summonerLookUp();" />
+<br />
+<br />Summoner Level: <span id="sLevel"></span>
+
+<br />Summoner ID: <span id="sID"></span>
+<br />
+<hr />
+<!--<br />Champion Name: <span id="champName"></span>-->
+<!--<br /><span id="image"></span>-->
+
+<hr />
+<!--<br /><span id="matchList"></span> <span id="champId"></span><br />-->
+<table style="width:100%" class="myTable">
+  <tr>
+    <td>Match Id</td>
+    <td>Champion Id</td>
+    <td>Champion Name</td>
+    <td>Champion Image</td>
+  </tr>
+  <tr>
+    <td><span id="matchList"></span></td>
+    <td><span id="champId"></span></td>
+    <td><span id="champName"></span></td>
+    <td><span id="image"></span></td>
+  </tr>
+</table>
+</body>
+
+
