@@ -49,24 +49,24 @@ function letsGetMatches(summonerID) {
         },
         success: function (json) {
             
-        	//firstMatchId = json['matches'][1].matchId;
-          //champId = json['matches'][1].champion;
-          for(x=1;x<6;x++){
+          for(x=0;x<5;x++){
           	matches = json['matches'][x].matchId;
             champId = json['matches'][x].champion;
             getChampName(champId); 
             alert(image); //this won't stay in the code. It's just helping to debug.
-            document.getElementById("matchList").innerHTML = document.getElementById("matchList").innerHTML + matches + "<br />"; 							  document.getElementById("champId").innerHTML = document.getElementById("champId").innerHTML + champId + "<br />";
-            document.getElementById("champName").innerHTML = document.getElementById("champName").innerHTML + champName + "<br />";
-            document.getElementById("image").innerHTML = document.getElementById("image").innerHTML + image + "<br />";
+            $("#table1 tbody").append(
+            	"<tr>"+
+              "<td>"+matches+"</td>"+
+              "<td>"+champId+"</td>"+
+              "<td>"+champName+"</td>"+
+              "<td>"+image+"</td>"+
+              "</tr>");
+            
+            //document.getElementById("matchList").innerHTML = document.getElementById("matchList").innerHTML + matches + "<br />"; 							  					//document.getElementById("champId").innerHTML = document.getElementById("champId").innerHTML + champId + "<br />";
+           // document.getElementById("champName").innerHTML = document.getElementById("champName").innerHTML + champName + "<br />";
+            //document.getElementById("image").innerHTML = document.getElementById("image").innerHTML + image + "<br />";
             
           };
-         
-         // document.getElementById("1stMatchId").innerHTML = firstMatchId;
-          //document.getElementById("champId").innerHTML = champId;
-          //getChampName(champId);
-          //getMatchStats(firstMatchId);
-
           
             
         },
@@ -99,6 +99,8 @@ function getChampName(champId) {
         }
     });
 }
+
+
 
 function getMatchStats(firstMatchId) {
     $.ajax({
